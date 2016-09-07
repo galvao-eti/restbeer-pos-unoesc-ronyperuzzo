@@ -38,7 +38,7 @@ class Beer extends Form
             'name' => 'send',
             'type'  => 'Submit',
             'attributes' => [
-                'value' => 'Submit',
+                'value' => 'Salvar',
             ],
         ]);
 
