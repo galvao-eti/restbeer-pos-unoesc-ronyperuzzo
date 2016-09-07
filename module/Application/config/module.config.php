@@ -31,19 +31,20 @@ return array(
                 ),
             ),
             'insert' => array(
-                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'type' => 'Segment',
                 'options' => array(
-                    'route'    => '/insert',
+                    'route'    => '/insert[/:id]',
                     'defaults' => array(
                         'controller' => 'Application\Controller\Index',
                         'action'     => 'insert',
                     ),
-                ),
-            ),
-            // The following is a route to simplify getting started creating
-            // new controllers and actions without needing to create a new
-            // module. Simply drop new controllers in, and you can access them
-            // using the path /application/:controller/:action
+                    'constraints' => array(
+                          'id' => '[0-9]+',
+                      ),
+                  ),
+              ),
+           
+           
             'application' => array(
                 'type'    => 'Literal',
                 'options' => array(
