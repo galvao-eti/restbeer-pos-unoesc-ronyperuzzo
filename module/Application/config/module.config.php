@@ -44,6 +44,16 @@ return array(
                   ),
               ),
            
+            'delete' => array(
+                  'type' => 'Segment',
+                  'options' => array(
+                      'route'    => '/delete/:id',
+                      'defaults' => array(
+                          'controller' => 'Application\Controller\Index',
+                          'action'     => 'delete',
+                      ),
+                ),
+            ),
            
             'application' => array(
                 'type'    => 'Literal',
