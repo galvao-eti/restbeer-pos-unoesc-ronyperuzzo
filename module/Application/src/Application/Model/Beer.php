@@ -76,6 +76,12 @@ class Beer
 
         return $inputFilter;
     }
+    
+    public function getArrayCopy()
+    {
+        return get_object_vars($this);
+    }
+    
     //usado pelo TableGateway
     public function exchangeArray($data)
     {
@@ -84,4 +90,5 @@ class Beer
         $this->style  = (!empty($data['style'])) ? $data['style'] : null;
         $this->img  = (!empty($data['img'])) ? $data['img'] : null;
     }
+    
 }
